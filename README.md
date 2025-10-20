@@ -1,44 +1,44 @@
+# Loan Risk Prediction – Supervised Machine Learning
 
-## Overview of the Analysis
+## Overview
 
-This analysis focuses on evaluating machine learning models for credit risk classification. The goal is to determine whether a loan applicant is a low-risk or high-risk borrower based on financial data.
+**Loan_risk_ML** is a machine learning project aimed at predicting the risk level of loan applicants. By analyzing financial data, the project classifies applicants as either low-risk or high-risk borrowers. This classification assists financial institutions in making informed lending decisions, thereby mitigating potential defaults.
 
-## Purpose of the Analysis
+## ⚙️ Project Highlights
 
-The purpose of this analysis is to compare different machine learning models to assess their accuracy, precision, and recall in predicting credit risk. By evaluating these models, we can determine which is the most reliable for predicting high-risk loan applicants.
+- **Objective**: Predict the likelihood of loan default by classifying applicants into low-risk or high-risk categories.
+- **Dataset**: Utilizes a synthetic dataset containing financial information of loan applicants.
+- **Machine Learning Models**:
+  - **Logistic Regression**: A baseline model for binary classification.
+  - **Random Forest Classifier**: An ensemble method that improves prediction accuracy.
+- **Evaluation Metrics**:
+  - **Accuracy**: Measures the overall correctness of the model.
+  - **Precision**: Indicates the accuracy of positive predictions.
+  - **Recall**: Shows the ability of the model to capture all positive instances.
+  - **F1-Score**: The harmonic mean of precision and recall, providing a balance between the two.
+---
 
-## Financial Data and Prediction Target
-The dataset contains financial information on loan applicants, including:
+## 📂 Repository Structure
 
-Loan Size: The amount of the loan applied for.
+- `credit_risk_classification.ipynb`: Jupyter notebook containing the complete analysis, including data preprocessing, model development, training, and evaluation.
+- `lending_data.csv`: The dataset used for training and testing the models.
+- `Report.md`: A detailed report summarizing the methodology, results, and conclusions.
 
-Interest Rate: The percentage of interest charged on the loan.
+---
 
-Borrower Income: The applicant’s annual income.
+## 🛠️ Technologies Used
 
-Debt-to-Income Ratio: The ratio of total debt to income.
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
 
-Number of Accounts: The number of financial accounts the borrower has.
+---
 
-Derogatory Marks: Negative marks on the borrower’s credit history.
+## 🎯 Outcome
 
-Total Debt: The total amount of outstanding debt.
-
-
-## Stages of the machine learning process:
-Data Preprocessing: Cleaned and transformed data, handled missing values, and performed feature encoding.
-
-Feature Engineering: Selected relevant features to improve model performance.
-
-Model Selection: Tested multiple models, including Logistic Regression and other classification algorithms.
-
-Training and Testing: Split data into training and testing sets to evaluate model performance.
-
-Evaluation: Used accuracy, precision, and recall metrics to compare models.
-
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any other algorithms).
-
-## Results
+The project successfully demonstrates the application of machine learning techniques to predict loan default risk. The Random Forest Classifier outperformed the Logistic Regression model, achieving higher accuracy and F1-score, indicating its effectiveness in identifying high-risk loan applicants.
 
 Confusion Matrix:
 
@@ -54,13 +54,3 @@ Interpretation:
 31 incorrectly predicted high-risk loans (1) when they were actually low-risk (0).
 
 476 correctly predicted high-risk loans (1).
-
-## Summary
-
-Performance Considerations:
-
-If predicting high-risk loans (1s) correctly is the priority (minimizing false negatives), a model with high recall should be chosen.
-
-If minimizing false positives (incorrectly classifying a low-risk loan as high-risk) is crucial, a model with high precision is preferred.
-
-Best Performing Model: The model with the highest accuracy, precision, and recall should be considered the best-performing model. If recall is prioritized (to reduce false negatives), then a model with high recall for 1 predictions is preferred.
